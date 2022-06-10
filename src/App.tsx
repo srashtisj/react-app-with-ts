@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { PersonDetail } from "./components/PersonDetail";
+import { Card } from "./components/Card";
 
 function App() {
   const names = [
@@ -9,10 +9,10 @@ function App() {
     { name: "Alex", age: "27" },
   ];
   return (
-    <div className="App">
+    <Card className="App">
       <PersonDetail name={names[0].name} />
       <PersonDetail name={names[1].name} />
-    </div>
+    </Card>
   );
 }
 
