@@ -3,7 +3,7 @@ import "./App.css";
 import { PersonDetail } from "./components/Person/PersonDetail";
 import { Card } from "./components/UI/Card";
 
-function App() {
+const App = () => {
   const names = [
     { name: "Max", age: "20" },
     { name: "Alex", age: "27" },
@@ -14,6 +14,6 @@ function App() {
       <PersonDetail name={names[1].name} />
     </Card>
   );
-}
+};
 
 export default App;
