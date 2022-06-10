@@ -1,5 +1,5 @@
 import "./PersonDetail.css";
-import { Card } from "./Card";
+import { Card } from "../UI/Card";
 
 export function PersonDetail(props: any) {
   return (

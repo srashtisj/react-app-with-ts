@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import { PersonDetail } from "./components/PersonDetail";
-import { Card } from "./components/Card";
+import { PersonDetail } from "./components/Person/PersonDetail";
+import { Card } from "./components/UI/Card";
 
 function App() {
   const names = [
