@@ -1,26 +1,25 @@
-import React from "react";
+import { useState } from "react";
 import "./App.css";
-import { PersonDetail } from "./components/Person/PersonDetail";
-import { Card } from "./components/UI/Card";
 import { NewPerson } from "./components/NewPerson/NewPerson";
+import { Persons } from "./components/Person/Persons";
+
+const DUMMY_PERSON = [
+  { name: "Max", age: "20" },
+  { name: "Alex", age: "27" },
+];
 
 const App = () => {
-  const persons = [
-    { name: "Max", age: "20" },
-    { name: "Alex", age: "27" },
-  ];
+  const [persons, setPersons] = useState(DUMMY_PERSON);
 
   const addPersonHandler = (person: any) => {
-    persons.push(person);
-    console.log(persons);
+    setPersons((prevState) => {
+      return [person, ...prevState];
+    });
   };
   return (
     <div>
       <NewPerson onAddPersonHandler={addPersonHandler} />
-      <Card className="App">
-        <PersonDetail name={persons[0].name} />
-        <PersonDetail name={persons[1].name} />
-      </Card>
+      <Persons items={persons} />
     </div>
   );
 };
